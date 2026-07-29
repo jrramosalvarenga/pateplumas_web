@@ -312,12 +312,11 @@ function startCheckout() {
 function submitOrderDetails(e) {
   e.preventDefault();
   const name = document.getElementById("field-name").value.trim();
-  const phone = document.getElementById("field-phone").value.trim();
   const time = document.getElementById("field-time").value;
   const payment = document.getElementById("field-payment").value;
   const notes = document.getElementById("field-notes").value.trim();
 
-  if (!name || !phone || !time) return;
+  if (!name || !time) return;
 
   const pickupLabels = {
     asap: "Lo antes posible (20-25 min)",
@@ -329,7 +328,7 @@ function submitOrderDetails(e) {
   const order = {
     id: "PP-" + Math.floor(100000 + Math.random() * 900000),
     date: new Date().toISOString(),
-    customer: { name, phone },
+    customer: { name },
     pickupTime: time,
     pickupLabel: pickupLabels[time] || time,
     payment,
@@ -349,7 +348,7 @@ function submitOrderDetails(e) {
     `\nTotal: ${formatMoney(order.subtotal)}` +
     `\nRecoger: ${order.pickupLabel}` +
     `\nPago en tienda: ${order.payment}` +
-    `\nNombre: ${order.customer.name}\nTel: ${order.customer.phone}` +
+    `\nNombre: ${order.customer.name}` +
     (order.notes ? `\nNotas: ${order.notes}` : "");
 
   const link = waLink(waText);

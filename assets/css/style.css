@@ -1172,6 +1172,7 @@ section {
 
 .drawer-body {
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
   padding: 20px 26px;
 }
@@ -1284,7 +1285,12 @@ section {
    CHECKOUT FLOW (dentro del drawer)
    ========================================================= */
 .checkout-step { display: none; }
-.checkout-step.active { display: block; }
+.checkout-step.active {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
 
 .step-back {
   display: inline-flex;
