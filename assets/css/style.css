@@ -1518,7 +1518,14 @@ section {
 }
 
 @media (max-width: 760px) {
-  .site-header .container { position: relative; }
+  .site-header .container { position: relative; padding: 0 16px; }
+  .brand { gap: 8px; }
+  .brand img { height: 40px; width: 40px; }
+  .brand-text .name { font-size: 1.05rem; }
+  .brand-text .tag { display: none; }
+  .header-actions { gap: 8px; }
+  .header-actions .icon-btn { width: 36px; height: 36px; }
+  .header-actions .btn.btn-sm { padding: 8px 14px; font-size: 0.68rem; }
   .main-nav {
     display: none;
     position: absolute;
