@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Menú — Pateplumas Coffee</title>
+<meta name="description" content="Explora el menú completo de Pateplumas Coffee: cafés, frappés, smoothies, crepas, desayunos y postres. Ordena en línea y recoge en tienda." />
+<link rel="icon" href="assets/img/logo.jpeg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo.jpeg" alt="Pateplumas Coffee" />
+      <span class="brand-text">
+        <span class="name">Pateplumas</span>
+        <span class="tag">Hecho con amor</span>
+      </span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Inicio</a>
+      <a href="menu.html" class="active">Menú</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="index.html#ubicacion">Ubicación</a>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="icon-btn" data-open-cart aria-label="Ver pedido">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="cart-count">0</span>
+      </button>
+      <a href="index.html#ubicacion" class="btn btn-primary btn-sm">Visítanos</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menú">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MENU HERO ============ -->
+<section class="menu-hero">
+  <div class="container">
+    <span class="eyebrow">Nuestro menú</span>
+    <h1>Cada receta, hecha con amor</h1>
+    <p>Haz clic en cualquier fotografía para ver la descripción completa, personalizar tu pedido y agregarlo a tu pedido.</p>
+  </div>
+</section>
+
+<!-- ============ FILTROS ============ -->
+<div class="filter-bar">
+  <div class="container">
+    <div class="filter-scroll" id="filter-scroll">
+      <button type="button" class="filter-pill active" data-filter="todos">Todo el menú</button>
+      <!-- Se agregan dinámicamente los filtros por categoría -->
+    </div>
+  </div>
+</div>
+
+<!-- ============ PRODUCTOS ============ -->
+<section class="product-section">
+  <div class="container" id="menu-container"></div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img src="assets/img/logo.jpeg" alt="Pateplumas Coffee" />
+          <span class="brand-text"><span class="name">Pateplumas</span><span class="tag" style="color:rgba(255,255,255,0.5)">Hecho con amor</span></span>
+        </a>
+        <p>Café de especialidad, crepas, desayunos y postres hechos con amor, todos los días.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.5 8.5 0 0 1-12.36 7.56L3 20l1.05-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Explorar</h5>
+        <a href="index.html">Inicio</a>
+        <a href="menu.html">Menú</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="index.html#ubicacion">Ubicación</a>
+      </div>
+      <div class="footer-col">
+        <h5>Categorías</h5>
+        <a href="menu.html?cat=cafe-caliente">Café Caliente</a>
+        <a href="menu.html?cat=frappes">Frappés</a>
+        <a href="menu.html?cat=crepas">Crepas</a>
+        <a href="menu.html?cat=postres">Postres</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <p>San Francisco de la Paz, Olancho</p>
+        <p>+504 9561-9191</p>
+        <p>hola@pateplumascoffee.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Pateplumas Coffee. Todos los derechos reservados.</span>
+      <span>Hecho con amor ☕</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ OVERLAY / MODAL / DRAWER / TOAST ============ -->
+<div class="overlay" id="overlay"></div>
+
+<div class="modal" id="product-modal">
+  <button type="button" class="modal-close" id="modal-close-btn" aria-label="Cerrar">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="product-modal-grid">
+    <div class="product-modal-photo"><img id="modal-photo" src="" alt="" /></div>
+    <div class="product-modal-info">
+      <span class="cat-label" id="modal-cat"></span>
+      <h2 id="modal-name"></h2>
+      <p class="long-desc" id="modal-desc"></p>
+
+      <div class="option-group" id="modal-sizes">
+        <div class="og-title">Tamaño</div>
+        <div class="option-pills"></div>
+      </div>
+
+      <div class="option-group" id="modal-extras">
+        <div class="og-title">Personaliza tu pedido</div>
+        <div class="extras-list"></div>
+      </div>
+
+      <div class="qty-row">
+        <div class="og-title" style="margin:0">Cantidad</div>
+        <div class="qty-control">
+          <button type="button" id="modal-qty-minus">−</button>
+          <span id="modal-qty">1</span>
+          <button type="button" id="modal-qty-plus">+</button>
+        </div>
+      </div>
+
+      <div class="qty-row">
+        <span class="og-title" style="margin:0">Total</span>
+        <span class="modal-total" id="modal-total">L 0.00</span>
+      </div>
+
+      <button type="button" class="btn btn-primary btn-block" id="modal-add-btn">Agregar al pedido</button>
+    </div>
+  </div>
+</div>
+
+<div class="drawer" id="cart-drawer">
+  <div class="drawer-head">
+    <h3>Tu pedido</h3>
+    <button type="button" class="icon-btn" data-close-cart aria-label="Cerrar pedido">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <!-- Paso: Carrito -->
+  <div class="checkout-step active" id="step-cart">
+    <div class="drawer-body" id="drawer-cart-body"></div>
+    <div class="drawer-foot">
+      <div class="summary-row total"><span>Subtotal</span><span id="drawer-subtotal">L 0.00</span></div>
+      <p style="font-size:0.74rem;color:var(--color-ink-soft);margin:8px 0 16px">El total final se confirma en tienda al momento de recoger.</p>
+      <button type="button" class="btn btn-primary btn-block" id="cart-checkout-btn" disabled>Continuar pedido</button>
+    </div>
+  </div>
+
+  <!-- Paso: Detalles del pedido -->
+  <div class="checkout-step" id="step-details">
+    <div class="drawer-body">
+      <button type="button" class="step-back" data-back-to="cart">← Volver al pedido</button>
+      <h3 style="margin-bottom:6px">Datos para recoger tu pedido</h3>
+      <p style="font-size:0.82rem;margin-bottom:18px">Al enviar, se abrirá WhatsApp con tu pedido completo listo para mandar.</p>
+      <form id="details-form">
+        <div class="field"><label>Nombre completo</label><input type="text" id="field-name" required /></div>
+        <div class="field"><label>Teléfono</label><input type="tel" id="field-phone" required /></div>
+        <div class="field">
+          <label>¿Cuándo recoges?</label>
+          <select id="field-time" required>
+            <option value="">Selecciona una opción</option>
+            <option value="asap">Lo antes posible (20-25 min)</option>
+            <option value="30">En 30 minutos</option>
+            <option value="60">En 1 hora</option>
+            <option value="120">En 2 horas</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Método de pago en tienda</label>
+          <select id="field-payment">
+            <option value="Efectivo">Efectivo</option>
+            <option value="Tarjeta">Tarjeta</option>
+          </select>
+        </div>
+        <div class="field"><label>Notas especiales (opcional)</label><textarea id="field-notes" placeholder="Ej. mensaje para caja de regalo, alergias, etc."></textarea></div>
+
+        <div class="summary-row total" style="margin-bottom:18px"><span>Subtotal</span><span id="details-subtotal">L 0.00</span></div>
+        <button type="submit" class="btn btn-gold btn-block">
+          <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.837.741 5.5 2.041 7.812L0 32l8.354-2.021A15.9 15.9 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.257a13.19 13.19 0 0 1-6.729-1.84l-.483-.287-4.995 1.208 1.234-4.87-.315-.5A13.19 13.19 0 0 1 2.743 16C2.743 8.7 8.7 2.743 16 2.743S29.257 8.7 29.257 16 23.3 29.257 16 29.257zm7.29-9.876c-.399-.2-2.36-1.166-2.726-1.3-.365-.133-.63-.2-.897.2-.266.399-1.03 1.3-1.263 1.566-.233.266-.465.3-.864.1-.399-.2-1.685-.621-3.21-1.981-1.187-1.059-1.989-2.367-2.222-2.766-.233-.399-.025-.615.175-.814.18-.18.4-.465.6-.698.2-.233.266-.399.4-.665.133-.266.066-.499-.033-.698-.1-.2-.897-2.164-1.229-2.964-.324-.777-.653-.672-.897-.685l-.764-.014c-.266 0-.698.1-1.063.499-.365.399-1.396 1.364-1.396 3.328 0 1.964 1.429 3.862 1.628 4.129.2.266 2.812 4.293 6.815 6.02.952.411 1.694.657 2.273.841.955.304 1.825.261 2.512.158.766-.114 2.36-.965 2.693-1.897.333-.931.333-1.73.233-1.897-.1-.166-.365-.266-.764-.465z"/></svg>
+          Enviar pedido por WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Paso: Confirmación -->
+  <div class="checkout-step" id="step-confirm">
+    <div class="drawer-body">
+      <div class="confirm-box">
+        <div class="check-circle">✓</div>
+        <p class="eyebrow" style="margin-bottom:0">Pedido listo para enviar</p>
+        <div class="order-no" id="confirm-order-no">PP-000000</div>
+        <p>Recoge tu pedido: <strong id="confirm-pickup"></strong></p>
+        <div class="receipt" id="confirm-receipt"></div>
+        <p style="font-size:0.8rem;margin-bottom:14px">Deberías ver WhatsApp abierto en otra pestaña. Si no se abrió, usa el botón:</p>
+        <a href="#" id="whatsapp-link" target="_blank" rel="noopener" class="btn btn-gold btn-block" style="margin-bottom:12px">Enviar pedido por WhatsApp</a>
+        <button type="button" class="btn btn-outline btn-block" id="new-order-btn">Listo</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a href="#" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32" fill="#fff"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.837.741 5.5 2.041 7.812L0 32l8.354-2.021A15.9 15.9 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.257a13.19 13.19 0 0 1-6.729-1.84l-.483-.287-4.995 1.208 1.234-4.87-.315-.5A13.19 13.19 0 0 1 2.743 16C2.743 8.7 8.7 2.743 16 2.743S29.257 8.7 29.257 16 23.3 29.257 16 29.257zm7.29-9.876c-.399-.2-2.36-1.166-2.726-1.3-.365-.133-.63-.2-.897.2-.266.399-1.03 1.3-1.263 1.566-.233.266-.465.3-.864.1-.399-.2-1.685-.621-3.21-1.981-1.187-1.059-1.989-2.367-2.222-2.766-.233-.399-.025-.615.175-.814.18-.18.4-.465.6-.698.2-.233.266-.399.4-.665.133-.266.066-.499-.033-.698-.1-.2-.897-2.164-1.229-2.964-.324-.777-.653-.672-.897-.685l-.764-.014c-.266 0-.698.1-1.063.499-.365.399-1.396 1.364-1.396 3.328 0 1.964 1.429 3.862 1.628 4.129.2.266 2.812 4.293 6.815 6.02.952.411 1.694.657 2.273.841.955.304 1.825.261 2.512.158.766-.114 2.36-.965 2.693-1.897.333-.931.333-1.73.233-1.897-.1-.166-.365-.266-.764-.465z"/></svg>
+</a>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Construir filtros por categoría dinámicamente
+    const filterScroll = document.getElementById("filter-scroll");
+    CATEGORIES.forEach((cat) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "filter-pill";
+      btn.setAttribute("data-filter", cat.id);
+      btn.innerHTML = `<span>${cat.icon}</span> ${cat.name}`;
+      filterScroll.appendChild(btn);
+    });
+
+    // Construir el catálogo agrupado por categoría
+    const container = document.getElementById("menu-container");
+    container.innerHTML = CATEGORIES.map((cat) => {
+      const products = getProductsByCategory(cat.id);
+      if (!products.length) return "";
+      return `
+        <div class="menu-category-block" data-category="${cat.id}">
+          <h2 class="category-title"><span class="icon">${cat.icon}</span> ${cat.name}</h2>
+          <div class="product-grid">
+            ${products
+              .map(
+                (p) => `
+              <div class="product-card" data-product-id="${p.id}">
+                <div class="product-photo reveal">
+                  <img src="${p.img}" alt="${p.name}" loading="lazy" />
+                  ${p.tags && p.tags.length ? `<span class="product-tag">${p.tags[0]}</span>` : ""}
+                </div>
+                <div class="product-body">
+                  <div class="pname">${p.name}</div>
+                  <div class="pdesc">${p.shortDesc}</div>
+                  <div class="product-footer">
+                    <span class="price">${formatMoney(p.price)}</span>
+                    <button type="button" class="add-btn" aria-label="Agregar">+</button>
+                  </div>
+                </div>
+              </div>`
+              )
+              .join("")}
+          </div>
+        </div>`;
+    }).join("");
+    observeReveals(container);
+
+    // Enlazar eventos de las tarjetas de producto recién insertadas
+    container.querySelectorAll("[data-product-id]").forEach((el) => {
+      el.addEventListener("click", (e) => {
+        const addBtn = e.target.closest(".add-btn");
+        const id = el.getAttribute("data-product-id");
+        if (addBtn) {
+          e.stopPropagation();
+          quickAdd(id);
+        } else {
+          openProductModal(id);
+        }
+      });
+    });
+
+    // Re-enlazar filtros (ahora que existen todos los botones)
+    document.querySelectorAll(".filter-pill[data-filter]").forEach((pill) => {
+      pill.addEventListener("click", () => {
+        document.querySelectorAll(".filter-pill").forEach((p) => p.classList.remove("active"));
+        pill.classList.add("active");
+        filterMenu(pill.getAttribute("data-filter"));
+      });
+    });
+
+    // Aplicar filtro inicial desde ?cat=
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get("cat");
+    if (cat) {
+      const target = document.querySelector(`.filter-pill[data-filter="${cat}"]`);
+      if (target) target.click();
+    }
+  });
+</script>
+</body>
+</html>
